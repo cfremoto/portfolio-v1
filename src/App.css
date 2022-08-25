@@ -48,6 +48,7 @@ section {
 .btn {
   display: inline-block;
   margin-top: 1rem;
+  margin-right: 0.3rem;
   padding: .8rem 3rem;
   background: var(--main-color);
   color: #fff;
@@ -331,11 +332,19 @@ header .follow a:hover {
 .about .row-2 .box-container .box h3 {
   color: var(--main-color);
   font-size: 3rem;
+  text-align: center;
 }
 
-.about .row-2 .box-container .box p {
-  color: #666;
-  font-size: 1.7rem;
+.about .row-2 .box-container .box h3 span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .row-2 .box-container .box h3 img {
+  width: 70%;
+  height: 6rem;
   padding-top: .5rem;
 }
 
