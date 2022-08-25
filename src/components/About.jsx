@@ -23,17 +23,17 @@ const About = () => {
             <div class="box">
 
                 <p> <span> genero : </span> masculino </p>
-                <p> <span> lenguaje : </span> español, english </p>
+                <p> <span> lenguaje : </span> español, ingles (actualmente Estudiando) </p>
                 <p> <span> desarrollo : </span> full stack developer </p>
             </div>
             <div class="box">
 
                 <p> <span> telefono : </span> +58 412 115 90 42 </p>
-                <p> <span> email : </span> cesar.bfernandez@gmail.com </p>
+                <p> <span> email : </span> <Link to="mailto:homerogazze1015@gmail.com" rel="noopener noreferrer" target="_blank">cesar.bfernandez@gmail.com</Link></p>
                 <p> <span> pais : </span> venezuela </p>
             </div>
         </div>
-        <Link to="../assets/doc/CV_cesarFernandez.pdf" class="btn">descarga CV</Link>
+          <a href="/public/doc/CV_cesarFernandez.pdf" class="btn" download>descarga CV</a>
         <Link to="/contacto" class="btn">contratame</Link>
       </div>
       </div>

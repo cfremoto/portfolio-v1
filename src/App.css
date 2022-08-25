@@ -170,7 +170,7 @@ header .follow a:hover {
 }
 
 .home .image {
-  flex: 1 1 40rem;
+  flex: 1 1 20rem;
 }
 
 .home .image img {
@@ -217,7 +217,7 @@ header .follow a:hover {
 }
 
 .about .row-1 .image {
-  flex: 1 1 25rem;
+  flex: 1 1 0;
 }
 
 .about .row-1 .image img {
@@ -230,7 +230,7 @@ header .follow a:hover {
 }
 
 .about .row-1 .content {
-  flex: 1 1 50rem;
+  flex: 1 1 40rem;
 }
 
 .about .row-1 .content h3 {
@@ -257,6 +257,12 @@ header .follow a:hover {
 
 .about .row-1 .content .box-container .box span {
   color: var(--main-color);
+}
+
+.about .row-1 .content .box-container .box p a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
 .about .row-2 {
@@ -322,7 +328,7 @@ header .follow a:hover {
 }
 
 .about .row-2 .box-container .box {
-  flex: 1 1 15rem;
+  flex: 1 1 20rem;
   background: #fff;
   padding: 2rem;
   border-radius: .5rem;
@@ -438,11 +444,13 @@ header .follow a:hover {
 
 .portfolio .box-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 1.5rem;
+  align-items: center;
 }
 
 .portfolio .box-container .box {
+  width: 60%;
   flex: 1 1 30rem;
   height: 25rem;
   position: relative;
@@ -536,6 +544,10 @@ header .follow a:hover {
 .contact .icons-container .icons p {
   color: #666;
   font-size: 1.7rem;
+}
+
+.contact .icons-container .icons:nth-child(1) p {
+  text-transform: lowercase;
 }
 
 .contact .row {
