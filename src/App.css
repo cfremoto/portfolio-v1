@@ -477,7 +477,9 @@ body.dark .contact .row form {
 
 
 body.dark .contact .row form textarea,
-body.dark .contact .row form input[type=text] {
+body.dark .contact .row form input[type=text],
+body.dark .contact .row form input[type=email],
+body.dark .contact .row form input[type=number] {
   background: rgba(240, 232, 232, 0.788);
 }
 
