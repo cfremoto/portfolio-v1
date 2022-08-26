@@ -30,7 +30,9 @@ const Header = () => {
     <header className={headerClass}>
       <Link to="/" className="logo"> <span>César</span> Fernández </Link>
       <DarkMode />
-      <Nav />
+        <Nav
+          switchMenu={switchMenu}
+        />
       <Redes />
       </header>
     </>

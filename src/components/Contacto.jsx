@@ -1,8 +1,19 @@
-
+import emailjs from 'emailjs-com'
 
 const Contacto = () => {
 
-  return (
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs.sendForm('service_9d5wjfp', 'template_gz42g6j', e.target, '4jeZZsZagr6UAl4pnbQdW')
+            .then(response => {
+                console.log('enviar notificacion')
+            })
+            .catch(err => console.log(err))
+    }
+
+    return (
+
     <section className="contact" id="contact">
 
         <h1 className="heading"> contacta <span> me </span> </h1>
@@ -33,15 +44,15 @@ const Contacto = () => {
 
         <div className="row">
 
-            <form action="">
+            <form onSubmit={sendEmail}>
 
-                <input type="text" placeholder="nombre" className="box"/>
-                <input type="email" placeholder="correo" className="box"/>
-                <input type="number" placeholder="numero" className="box"/>
+                <input type="text" name="nombre" placeholder="nombre" className="box"/>
+                <input type="email" name="email" placeholder="correo" className="box"/>
+                <input type="number" name="telefono" placeholder="numero" className="box"/>
 
-                <textarea name="" placeholder="mensaje" id="" cols="30" rows="10"></textarea>
+                <textarea name="mensaje" placeholder="mensaje" id="" cols="30" rows="10"></textarea>
 
-                <input type="submit" className="btn" value="enviar mensaje"/>
+                <input type="submit" value="enviar mensaje"/>
 
             </form>
 
@@ -51,6 +62,6 @@ const Contacto = () => {
 
 
     </section>
-  )
+    )
 }
 export default Contacto
