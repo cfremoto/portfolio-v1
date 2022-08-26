@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #e38528;
+
 }
 
 * {
@@ -29,8 +30,8 @@ body {
 }
 
 body.dark {
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: rgba(182, 181, 181, 0.788);
+  color: #fff;
 }
 
 section {
@@ -188,7 +189,7 @@ header .follow a:hover {
 }
 
 .about .row-1 .image {
-  flex: 1 1 0;
+  flex: 1 1 20rem;
 }
 
 .about .row-1 .image img {
@@ -344,13 +345,11 @@ body.dark .experience .box-container .box .content {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
 }
 
 .portfolio .box-container .box {
 
-  flex: 1 1 30%;
+  flex: 1 1 30rem;
   height: 25rem;
   position: relative;
   overflow: hidden;
