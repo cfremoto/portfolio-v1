@@ -1,15 +1,24 @@
+
 import emailjs from 'emailjs-com'
+import { useRef, useState } from 'react'
+import Swal from 'sweetalert2'
 
 const Contacto = () => {
 
-    const sendEmail = (e) => {
+    const form = useRef()
+
+    const initialState = {nombre:'', email:'',telefono:'', mensaje:'' }
+    const [email, setEmail] = useState(initialState)
+    const handle = (e) => setEmail({...email, [e.target.name]: e.target.value})
+
+    const sendEmail = async (e) => {
         e.preventDefault()
 
-        emailjs.sendForm('service_9d5wjfp', 'template_gz42g6j', e.target, '4jeZZsZagr6UAl4pnbQdW')
-            .then(response => {
-                console.log('enviar notificacion')
-            })
-            .catch(err => console.log(err))
+        await emailjs.sendForm('service_9d5wjfp', 'template_0zw52ma', form.current, 'hKi06e2PGje7VXQ45')
+        Swal.fire('Correo enviado Exitosamente!!!')
+        setEmail(initialState)
+
+
     }
 
     return (
@@ -44,15 +53,19 @@ const Contacto = () => {
 
         <div className="row">
 
-            <form onSubmit={sendEmail}>
+            <form onSubmit={sendEmail} ref={form}>
 
-                <input type="text" name="nombre" placeholder="nombre" className="box"/>
-                <input type="email" name="email" placeholder="correo" className="box"/>
-                <input type="number" name="telefono" placeholder="numero" className="box"/>
+                    <input
+                        type="text" name="nombre"placeholder="nombre" className="box" onChange={handle} value={email.nombre}/>
+                    <input
+                        type="email" name="email" placeholder="correo" className="box" onChange={handle} value={email.email}/>
+                    <input
+                        type="number" name="telefono" placeholder="numero" className="box" onChange={handle} value={email.telefono}/>
 
-                <textarea name="mensaje" placeholder="mensaje" id="" cols="30" rows="10"></textarea>
+                    <textarea
+                        name="mensaje" placeholder="mensaje" id="" cols="30" rows="10" onChange={handle} value={email.mensaje}></textarea>
 
-                <input type="submit" value="enviar mensaje"/>
+                <input type="submit" value="enviar mensaje" className="btn"/>
 
             </form>
 
