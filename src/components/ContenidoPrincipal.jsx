@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import fotoHome from '../assets/imagenes/fotoHome.png'
+import fotoHome from '../assets/imagenes/cesarA-PhotoRoom.png'
 const ContenidoPrincipal = () => {
 
   return (

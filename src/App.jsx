@@ -1,13 +1,14 @@
 import './App.css'
-import Home from './components/Home'
+import Header from './components/Header'
 import Router from './routes/Router'
+
 
 const App = () => {
 
-
   return (
     <>
-      <Home />
+
+      <Header />
       <Router />
     </>
 

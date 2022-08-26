@@ -2,8 +2,6 @@
 
 :root {
   --main-color: #e38528;
-  --blue: rgb(190, 190, 190);
-  --white: rgb(236, 236, 236);
 }
 
 * {
@@ -200,6 +198,10 @@ header .follow a:hover {
   border: 1rem solid #fff;
   border-radius: .5rem;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+body.dark .about .row-1 .image img {
+  border: 1rem solid rgba(240, 232, 232, 0.788);
 }
 
 .about .row-1 .content {
@@ -567,11 +569,6 @@ body.dark .contact .row .map {
 
   header.active {
     left: 0%;
-  }
-
-  .cursor-1,
-  .cursor-2 {
-    display: none;
   }
 
 }
