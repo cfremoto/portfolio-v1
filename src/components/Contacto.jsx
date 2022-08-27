@@ -18,7 +18,6 @@ const Contacto = () => {
         Swal.fire('Correo enviado Exitosamente!!!')
         setEmail(initialState)
 
-
     }
 
     return (
