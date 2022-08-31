@@ -30,7 +30,7 @@ body {
 }
 
 body.dark {
-  background-color: rgba(182, 181, 181, 0.788);
+  background-color: rgb(182, 181, 181);
   color: #fff;
 }
 
@@ -137,6 +137,7 @@ header .follow a:hover {
 .home {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -538,6 +539,39 @@ body.dark .contact .row .map {
 .footer span {
   color: var(--main-color);
 }
+
+.home .content .info {
+  position: relative;
+  width: max-content;
+}
+
+.home .content .info::after {
+  content: '';
+  border-left: 2px solid black;
+  width: 32ch;
+  height: 80%;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #fcf2e8;
+  animation: tipado 3s infinite alternate steps(32);
+}
+
+body.dark .home .content .info::after {
+  background-color: rgb(182, 181, 181);
+}
+
+/* animaciones */
+@keyframes tipado{
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 
 @keyframes bounce {
   from {
