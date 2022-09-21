@@ -13,7 +13,7 @@ const ContenidoPrincipal = () => {
       </div>
 
       <div className="image">
-        <img src={fotoNueva} alt="foto cesar" />
+          <img src={fotoNueva} alt="foto cesar" />
       </div>
     </section>
   )
