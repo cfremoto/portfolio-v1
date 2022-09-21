@@ -16,7 +16,7 @@ const About = () => {
 
         <div className='content'>
           <h3>Mi nombre es César Fernández, soy un Full Stack Developer</h3>
-          <p>
+          <p className='text_normal'>
             Tengo preferencia por el Back-end, pero me divierte mucho maquetar y
             realizar interfaces en Front-end, me motivan los retos, el poder
             desafiarme cada dia, por otro lado soy de los que trabajan por un bien

@@ -219,6 +219,10 @@ body.dark .about .row-1 .image img {
   padding: 0.5rem 0;
 }
 
+.about .row-1 .content .text_normal {
+  text-transform: none;
+}
+
 .about .row-1 .content .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -602,6 +606,10 @@ body.dark .home .content .info::after {
 
   header.active {
     left: 0%;
+  }
+
+  .experience .box-container .box {
+    padding-right: 0;
   }
 }
 
